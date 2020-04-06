@@ -1,16 +1,44 @@
 .top-calendar,
 .main-calendar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.top-navigation {
+  margin-bottom: 20px;
 }
 
 #calendar li,
 #nome-mese {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .festivo {
-    color: red;
+  color: red;
+}
+
+.contenitore {
+  width: 1000px;
+  height: 80vh;
+  background-color: aqua;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sette-giorni {
+  width: 1000px;
+  background-color: red;
+  display: flex;
+  justify-content: space-around;
+}
+
+/******** template dei li *******/
+
+.li-riquadri {
+  width: 140px;
+  border: 1px solid black;
+  list-style: none;
+  text-align: center;
 }

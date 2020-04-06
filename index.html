@@ -26,12 +26,23 @@
         <button class="btn-navigation mese-succ">Mese successivo >></button>
       </div>
     </div>
+
     <div class="main-calendar">
+      <div class="row sette-giorni">
+        <div class=".giorni-fissi lunedi">Lunedì</div>
+        <div class=".giorni-fissi martedi">Martedì</div>
+        <div class=".giorni-fissi mercoledi">Mercoledì</div>
+        <div class=".giorni-fissi giovedi">Giovedì</div>
+        <div class=".giorni-fissi venerdi">Venerdì</div>
+        <div class=".giorni-fissi sabato">Sabato</div>
+        <div class=".giorni-fissi domenica">Domenica</div>
+      </div>
+      <div class="contenitore"></div>
       <ul id="calendar"></ul>
     </div>
 
     <script id="calendar-template" type="text/x-handlebars-template">
-      <li data-day="{{dataDay}}">
+      <li class="li-riquadri" data-day="{{dataDay}}">
         {{day}}
       </li>
     </script>

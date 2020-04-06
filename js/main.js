@@ -37,7 +37,7 @@ $(document).ready(function () {
           var giornoFestivo = giorniFestivi[i];
           var nomeFestivo = giornoFestivo.name;
           var dataFestivo = giornoFestivo.date;
-          $('#calendar li[data-day="' + dataFestivo + '"]')
+          $('.contenitore li[data-day="' + dataFestivo + '"]')
             .addClass("festivo")
             .append(" - " + nomeFestivo);
         }
@@ -47,7 +47,7 @@ $(document).ready(function () {
 
   function stampaGiorniMese(meseDaStampare) {
     //meseDaStampare è dataVisualizzata in questo caso, con un altro nome
-    $("#calendar").empty();
+    $(".contenitore").empty();
     var standardDay = meseDaStampare.clone(); // 1 gennaio 2018
     var giorniMese = meseDaStampare.daysInMonth();
     var nomeMese = meseDaStampare.format("MMMM");
@@ -60,7 +60,7 @@ $(document).ready(function () {
         dataDay: standardDay.format("YYYY-MM-DD"),
       };
       var templateFinale = templateGiorno(giornoDaInserire); // Stiamo popolando il template con i dati dell'oggetto
-      $("#calendar").append(templateFinale);
+      $(".contenitore").append(templateFinale);
       standardDay.add(1, "day");
     }
   }
