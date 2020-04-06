@@ -20,25 +20,27 @@
 }
 
 .contenitore {
-  width: 1000px;
+  width: 995px;
   height: 80vh;
-  background-color: aqua;
   display: flex;
   flex-wrap: wrap;
+  border-left: 1px solid black;
 }
 
 .sette-giorni {
-  width: 1000px;
+  width: 996px;
   background-color: red;
   display: flex;
   justify-content: space-around;
+  border-right: 1px solid black;
 }
 
 /******** template dei li *******/
 
 .li-riquadri {
-  width: 140px;
-  border: 1px solid black;
+  width: 141px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
   list-style: none;
   text-align: center;
 }

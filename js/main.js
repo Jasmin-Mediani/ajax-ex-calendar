@@ -53,6 +53,18 @@ $(document).ready(function () {
     var nomeMese = meseDaStampare.format("MMMM");
     $("#nome-mese").text(nomeMese); // Aggiorniamo il nome del mese in top calendar
     controlloBottoni();
+    console.log(meseDaStampare.isoWeekday());
+    var riquadriVuoti = meseDaStampare.isoWeekday() - 1;
+
+    for (var i = 0; i < riquadriVuoti; i++) {
+      var riquadroVuotoDaInserire = {
+        day: "",
+        dataDay: "",
+      };
+      var templateVuoto = templateGiorno(riquadroVuotoDaInserire); // Stiamo popolando il template con i dati dell'oggetto
+      $(".contenitore").append(templateVuoto);
+    }
+
     for (var i = 1; i <= giorniMese; i++) {
       // $('#calendar').append('<li>' + i + ' ' + nomeMese + '</li>');
       var giornoDaInserire = {
